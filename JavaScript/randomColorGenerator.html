@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color generator</title>
+    <style>
+        #centeringSection {
+            text-align: center;
+        }
+
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body id='changeBackgroundColor'>
+    <section id="centeringSection">
+        <h1 id="h1">Color Name: </h1>
+        <button id="btn">Change Color</button>
+    </section>
+
+    <script>
+        const h1 = document.querySelector('#h1');
+        const btn = document.querySelector('#btn');
+        const changeBackgroundColor = document.querySelector('#changeBackgroundColor');
+
+
+        const changeColor = function () {
+            let randomRed = Math.floor(Math.random() * 255) + 1;
+            let randomGreen = Math.floor(Math.random() * 255) + 1;
+            let randomBlue = Math.floor(Math.random() * 255) + 1;
+
+            changeBackgroundColor.style.backgroundColor = `rgb(${randomRed},${randomGreen},${randomBlue})`;
+            h1.innerText = `rgb(${randomRed},${randomGreen},${randomBlue})`;
+
+            if (randomRed < 100 && randomGreen < 100 && randomBlue < 100) {
+                h1.style.color = 'white';
+            } else {
+                h1.style.color = 'black';
+            }
+
+        }
+
+
+
+        btn.addEventListener('click', changeColor)
+
+
+
+    </script>
+</body>
+
+</html>

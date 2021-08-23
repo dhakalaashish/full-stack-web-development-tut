@@ -1,0 +1,70 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-List</title>
+</head>
+
+<body>
+    <h1>TO-DO-List</h1>
+    <script>
+        //"new" - Add a to-do
+        //"list" - List all the todo commands
+        //"delete" - Remove specific Todo
+        //"quit" - Quit App
+
+
+        let command = prompt("Enter a command: Your options are-'new': to Add a to-do, 'list': List all the todo commands, 'delete': Remove specific Todo, 'quit': Quit App");
+
+        while (command != 'new' && command != 'list' && command != 'delete' && command != 'quit') {
+            command = prompt("Please enter a valid command. Your options are-'new': to Add a to-do, 'list': List all the todo commands, 'delete': Remove specific Todo, 'quit': Quit App");
+        }
+
+        let listOfTodo = [];
+
+        while (command !== 'quit') {
+            if (command === 'new') {
+                var newTodo = prompt("What would you like to add on the list?");
+                console.log(`You have entered "${newTodo}" into the list!`);
+                listOfTodo.push(newTodo);
+
+            }
+            if (command === 'list') {
+                console.log("******Here's your list*********");
+                for (let i = 0; i < listOfTodo.length; i++) {
+                    console.log(`Index ${i} : ${listOfTodo[i]}`);
+                }
+                console.log("******End of the list***********");
+
+            }
+            if (command === 'delete') {
+                let indexNumber = parseInt(prompt("Which item in the list do you want to delete? Please write the index number."));
+                if (!indexNumber.NaN) {
+                    while (indexNumber >= listOfTodo.length || indexNumber < 0) {
+                        indexNumber = parseInt(prompt("Please enter a valid index number. Consider: Which item in the list do you want to delete? Please write the index number."));
+                    }
+                    console.log(`deleted item: "${listOfTodo[indexNumber]}"`)
+                    listOfTodo.splice(indexNumber, 1);
+                } else {
+                    console.log("You did not enter a valid number!");
+                }
+            }
+            command = prompt("Enter a command: Your options are-'new': to Add a to-do, 'list': List all the todo commands, 'delete': Remove specific Todo, 'quit': Quit App");
+            while (command != 'new' && command != 'list' && command != 'delete' && command != 'quit') {
+                command = prompt("Please enter a valid command. Your options are-'new': to Add a to-do, 'list': List all the todo commands, 'delete': Remove specific Todo, 'quit': Quit App");
+            }
+        }
+        console.warn("The to-do-app has closed. Please refresh the page to reopen the app. Warning: The entered data will be lost!")
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+

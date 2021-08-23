@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitting Form</title>
+</head>
+
+<body>
+    <h1>Twitter ko chora</h1>
+
+    <form action="" id="tweetForm">
+        <label for="username">Enter your Username</label>
+        <input type="text" name="username" id="username"><br>
+
+        <label for="tweet">Enter your tweet here:</label>
+        <input type="text" name="tweet" id="tweet"><br>
+
+        <button>Tweet ME!</button>
+
+        <h2>Tweet List</h2>
+        <ul id="tweetList">
+
+        </ul>
+    </form>
+
+    <script>
+        const tweetForm = document.querySelector('#tweetForm');
+
+
+        tweetForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const username = tweetForm.elements.username;
+            const tweet = tweetForm.elements.tweet;
+            addTweet(username.value, tweet.value);
+            username.value = '';
+            tweet.value = '';
+
+
+        })
+
+        const addTweet = (username, tweet) => {
+            const tweetList = document.querySelector('#tweetList');
+
+            const li = document.createElement('li');
+            const boldUser = document.createElement('b');
+            boldUser.append(username);
+            li.append(boldUser);
+            li.append(`: - ${tweet}`);
+
+            tweetList.append(li);
+
+
+        }
+    </script>
+
+</body>
+
+</html>

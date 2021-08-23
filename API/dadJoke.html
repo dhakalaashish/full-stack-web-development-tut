@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DadJoke</title>
+</head>
+
+<body>
+    <h1>Click to get random Dad Jokes</h1>
+    <button class="random-joke">Click Me</button>
+    <ul class="dad-joke"></ul>
+
+
+    <script>
+        const jokeContainer = document.querySelector('.dad-joke')
+        const randomJoke = document.querySelector('.random-joke')
+
+
+
+        const getDadJoke = async function () {
+            try {
+                const res = await fetch('https://icanhazdadjoke.com/', { headers: { Accept: 'application/json' } })
+                const data = await res.json()
+                return data.joke;
+            } catch (error) {
+                return "No Jokes available! Sorry!"
+            }
+
+        }
+
+        const addNewJoke = async () => {
+            const jokeText = await getDadJoke();
+            console.log(jokeText)
+            const newLI = document.createElement('li');
+            newLI.append(jokeText);
+            jokeContainer.append(newLI);
+        }
+        randomJoke.addEventListener('click', addNewJoke)
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Scorekeeper</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    </style>
+    <link rel="stylesheet" href="pingpong.css">
+</head>
+
+<body>
+
+    <section id="scorekeeper">
+
+        <div id="picture">
+            <img src="https://images.unsplash.com/photo-1491433415365-da7acd5425cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                alt="a man playing pingpong">
+        </div>
+
+        <div id="h1">
+            <h1>Pingpong Scorekeeper</h1>
+        </div>
+
+        <div id="scoreboard">
+            <h2> <span id="updateP1">0</span> to <span id="updateP2">0</span></h2>
+            <p>Use the button below to keep score.</p>
+
+            <form action="">
+                <label for="playTo"><b>Playing To:</b></label>
+                <select name="playTo" id="playTo">
+                    <option value="2">2</option>
+                    <option value="5" selected>5</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                </select>
+            </form>
+
+        </div>
+
+        <div id="buttons">
+            <button id="addP1">+1 Player One</button>
+            <button id="addP2">+1 Player Two</button>
+            <button id="reset">Reset</button>
+        </div>
+
+
+    </section>
+    <script src="pingpong.js"></script>
+</body>
+
+</html>

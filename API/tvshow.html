@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV show</title>
+    <style>
+
+    </style>
+</head>
+<h1>TV Show Search</h1>
+<form action="" id="searchForm">
+    <input type="text" placeholder="TV show title" name="query">
+    <button>Search</button>
+</form>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        // const form = document.querySelector('#searchForm')
+        // form.addEventListener('submit', async function (event) {
+        //     event.preventDefault();
+        //     const searchTerm = form.elements.query.value;
+        //     const response = await fetch(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
+        //     const data = await response.json()
+        //     // console.log(data[0].show.image.medium);
+        //     makeImages(data);
+        //     form.elements.query.value = '';
+
+        // })
+        // const makeImages = (shows) => {
+        //     for (let result of shows) {
+        //         if (result.show.image) {
+        //             const img = document.createElement('img');
+        //             img.src = result.show.image.medium;
+        //             document.body.append(img);
+        //         }
+
+        //     }
+        // }
+        const form = document.querySelector('#searchForm')
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const searchTerm = form.elements.query.value;
+            // const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
+            const config = { params: { q: searchTerm }, headers: {} } //can remove the header, it is just there to show how it can be used!
+            const res = await axios.get(`https://api.tvmaze.com/search/shows`, config)
+            // console.log(data[0].show.image.medium);
+            makeImages(res.data);
+            form.elements.query.value = '';
+
+        })
+        const makeImages = (shows) => {
+            for (let result of shows) {
+                if (result.show.image) {
+                    const img = document.createElement('img');
+                    img.src = result.show.image.medium;
+                    document.body.append(img);
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

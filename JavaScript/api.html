@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <h1>API - application programming interface</h1>
+    <script>
+        // fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+        //     .then((res) => {
+        //         console.log("Data waiting to be parsed", res);
+        //         return res.json();
+        //     })
+        //     .then((data) => {
+        //         console.log("Data parsed", data);
+        //         console.log(data.bpi.USD);
+        //         console.log(data.bpi.USD.rate);
+        //     })
+
+        const dataAxios = async () => {
+            let parsedData = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+            console.log(parsedData)
+            console.log(parsedData.data.bpi.USD.rate)
+
+        }
+        dataAxios();
+
+
+    </script>
+</body>
+
+</html>

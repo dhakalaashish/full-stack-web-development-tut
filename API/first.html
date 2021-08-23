@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apis</title>
+</head>
+
+<body>
+
+    <script src="first.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+
+        const data = '{"ticker":{"base":"BTC","target":"USD","price":"47230.15209243","volume":"70561.19827450","change":"59.32820620"},"timestamp":1629456782,"success":true,"error":""}'
+
+        const parsedData = JSON.parse(data);
+
+        console.log(parsedData.ticker.price);
+
+
+
+
+        //using axios with async function!
+        // setInterval(async () => {
+        //     let bitcoinApi = await axios('https://api.cryptonator.com/api/ticker/btc-usd');
+        //     console.log(bitcoinApi.data.ticker.price)
+        // }, 1000)
+    </script>
+</body>
+
+</html>

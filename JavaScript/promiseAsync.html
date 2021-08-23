@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise and Async</title>
+    <style>
+        body {
+            transition: 1s background-color;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Promise and Async</h1>
+    <script>
+        const delayedColorChange = (color, delay) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    document.body.style.backgroundColor = color;
+                    resolve();
+                }, delay)
+            })
+        }
+
+        // delayedColorChange('red', 1000)
+        //     .then(() => delayedColorChange('orange', 1000))
+        //     .then(() => delayedColorChange('yello', 1000))
+        //     .then(() => delayedColorChange('green', 1000))
+        //     .then(() => delayedColorChange('blue', 1000))
+        //     .then(() => delayedColorChange('indigo', 1000))
+        //     .then(() => delayedColorChange('violet', 1000))
+
+        // const login = async (username, password) => {
+        //     if (!username || !password) throw "Missing Credentials"
+        //     if (password === 'corgifeet') return 'Welcome!'
+        //     throw 'Invalid Password'
+        // }
+
+        // login('ashish.dhakal07', 'corgifeet')
+        //     .then(msg => {
+        //         console.log("loggedIn", msg);
+        //     })
+        //     .catch(err => {
+        //         console.log("Error", err);
+        //     })  
+
+        async function rainbow() {
+            await delayedColorChange('red', 1000)
+            await delayedColorChange('orange', 1000)
+            await delayedColorChange('yellow', 1000)
+            await delayedColorChange('green', 1000)
+            await delayedColorChange('blue', 1000)
+            await delayedColorChange('indigo', 1000)
+            await delayedColorChange('violet', 1000)
+        }
+
+        rainbow();
+    </script>
+</body>
+
+</html>
