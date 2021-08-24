@@ -1,0 +1,68 @@
+{
+    "soccer": {
+        "name": "Soccer",
+        "subscribers": 123455,
+        "description": "the football subreddit, blah blah blah for people who worship soccer! fools! maybe!",
+        "posts": [
+            {
+                "title": "hyaaaaa",
+                "author": "shweta",
+                "img": "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=501&q=80"
+            },
+            {
+                "title": "Messi MEssi Messi!!!",
+                "author": "chaitanya",
+                "img": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c29jY2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                "title": "Maitreya Maitreya Maitreya!!!",
+                "author": "maitreya",
+                "img": "https://images.unsplash.com/photo-1605135693932-f1d6fb1be3cc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNvY2NlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            }
+        ]
+    },
+    "chickens": {
+        "name": "Chicken",
+        "subscribers": 5780384,
+        "description": "I can't understand why some people are into chicken",
+        "posts": [
+            {
+                "title": "I need to quit",
+                "author": "aashish",
+                "img": "https://images.unsplash.com/photo-1556316918-880f9e893822?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80"
+            },
+            {
+                "title": "my childrens",
+                "author": "sanu dd",
+                "img": "https://images.unsplash.com/photo-1596644572057-7a87cb7d568e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=808&q=80"
+            },
+            {
+                "title": "whyy?",
+                "author": "maitreya",
+                "img": "https://images.unsplash.com/photo-1615828525991-2462f5f9e0a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            }
+        ]
+    },
+    "mightyharvest": {
+        "name": "Mighty Harvest",
+        "subscribers": 993344,
+        "description": "Damn those are some huge and mighty harvest this year!",
+        "posts": [
+            {
+                "title": "Ae kt, k lagayis yo?",
+                "author": "baba",
+                "img": "https://images.unsplash.com/photo-1528821154947-1aa3d1b74941?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHNtYWxsZXN0JTIwZnJ1aXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                "title": "bessari healthy xa yo! sab vitamin haru payinxa",
+                "author": "mummy",
+                "img": "https://images.unsplash.com/photo-1447699080189-1506569a2c4d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHNtYWxsZXN0JTIwZnJ1aXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            },
+            {
+                "title": "khanda khanda thaki sake!!!",
+                "author": "aashish",
+                "img": "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c21hbGxlc3QlMjBmcnVpdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            }
+        ]
+    }
+}
