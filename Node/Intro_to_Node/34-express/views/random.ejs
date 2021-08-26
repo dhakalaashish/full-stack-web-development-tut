@@ -1,0 +1,28 @@
+<%- include('partials/head.ejs')%>
+
+    <body>
+        <%- include('partials/navbar.ejs')%>
+            <h1>
+                Your random number is: <%=num%>
+            </h1>
+
+
+            <!-- below is for conditionals -->
+            <!-- i can do this -->
+            <h2>
+                It is a <%= oddOrEven %> number
+            </h2>
+            <!-- or this -->
+            <% if(num%2===0){ %>
+                <h2>That is an even number</h2>
+                <% }else{ %>
+                    <h2>Thats a odd number</h2>
+                    <% } %>
+                        <!-- or even this -->
+                        <h3>
+                            <%= num%2===0? 'EVEN' : 'ODD' %>
+                        </h3>
+                        <!-- Here , one of the two strings 'EVEN' and 'ODD' directly replaces the entire line 27 when output>
+</body>
+
+</html>

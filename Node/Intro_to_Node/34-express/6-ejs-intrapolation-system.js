@@ -1,8 +1,8 @@
 //tags
 //      <%    'Scriptlet' tag, for control-flow, no output
 //      <%_    'Whitespace Slurping' Scriptlet tag, strips all whitespace before it
-//      <%=    Outputs the value in the template (HTML escaped)
-//      <%-      Outputs the unescaped value into the template
+//      <%=    Outputs the value in the template (HTML escaped) -- basially the html will not be ran
+//      <%-      Outputs the unescaped value into the template -- basically the html will be ran
 //      <%#     Comment tag, no execution, no output
 //      <%%     Outputs a literal '<%'
 //      %>      Plain ending tag
