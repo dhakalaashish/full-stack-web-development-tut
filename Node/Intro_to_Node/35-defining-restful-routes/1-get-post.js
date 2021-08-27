@@ -4,6 +4,10 @@
 //post ----used to post data to the server, used to write/create/update, data is sent via request body, not a query
 //string!, can send any sort of data (JSON, URLencoded)
 
+//PUT vs PATCH  
+//the PUT method replaces all the current representations of the target resource with the request payload
+//the PATCH method, however, is used to apply partial modifications to a resource.
+
 const express = require('express')
 const app = express()
 //express.urlencoded is what we use if we are parsing data from a form
