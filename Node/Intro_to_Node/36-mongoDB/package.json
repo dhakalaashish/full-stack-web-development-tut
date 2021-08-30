@@ -1,11 +1,14 @@
 {
   "name": "36-mongodb",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "aashish",
-  "license": "ISC"
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mongoose": "^6.0.2"
+  }
 }
