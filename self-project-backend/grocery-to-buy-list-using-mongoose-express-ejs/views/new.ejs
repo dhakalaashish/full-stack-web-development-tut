@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+</head>
+
+<body>
+    <h1>Make a new Item</h1>
+    <form action="/grocery" method="POST">
+        <div>
+            <label for="name">Enter grocery name:</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="price">Enter price in dollars:</label>
+            <input type="number" name="price" id="price">
+        </div>
+        <div>
+            <label for="quantity">How many?</label>
+            <input type="number" name="quantity" id="quantity">
+        </div>
+        <div>
+            <label for="category">Select Category:</label>
+            <select name="category" id="category">
+                <option value="breakfast">breakfast</option>
+                <option value="lunch">lunch</option>
+                <option value="dinner">dinner</option>
+                <option value="dessert">dessert</option>
+            </select>
+        </div>
+        <div>
+            <label for="forWhom">Who is this for?</label>
+            <select name="forWhom" id="forWhom">
+                <option value="Aashish">Aashish</option>
+                <option value="Darcy">Darcy</option>
+                <option value="Both">Both</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <p><a href="/grocery">Cancel</a></p>
+</body>
+
+</html>

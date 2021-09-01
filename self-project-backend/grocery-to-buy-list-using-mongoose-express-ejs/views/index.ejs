@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroceryList</title>
+</head>
+
+<body>
+    <h1>Aashish's and Darcy's current grocery list</h1>
+    <ul>
+        <% weekOneGroceries.forEach((grocery)=>{%>
+            <li>
+                <a href="/grocery/<%=grocery._id%>">
+                    <%= grocery.name %>
+                </a>
+            </li>
+            <%}) %>
+    </ul>
+    <p><a href="/grocery/new">Add New Item</a></p>
+</body>
+
+</html>
