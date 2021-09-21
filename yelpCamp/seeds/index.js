@@ -14,7 +14,7 @@ async function main() {
 const sample = (array) => array[Math.floor(Math.random() * array.length)]
 
 
-descriptors[Math.floor(Math.random() * descriptors.length)]
+// descriptors[Math.floor(Math.random() * descriptors.length)]
 
 const seedDB = async () => {
     await Campground.deleteMany({})
