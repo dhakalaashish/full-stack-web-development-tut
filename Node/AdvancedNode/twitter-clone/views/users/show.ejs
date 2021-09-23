@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <%= user.name %>
+    </h1>
+
+    <p>Age: <%=user.age %>
+    </p>
+
+    <h2>Tweets:</h2>
+    <ul>
+        <% user.tweets.forEach((tweet)=>{ %>
+            <li>
+                <a href="/users/<%=user._id%>/tweets/<%=tweet._id%>">
+                    <%=tweet.tweet%>
+                </a>
+            </li>
+            <% }) %>
+    </ul>
+
+    <a href="/users/<%=user._id%>/tweets/new"><button>Add Tweet</button></a>
+
+    <hr>
+
+    <a href="/users/<%=user._id%>/edit"><button>Edit User</button></a> <br>
+    <form action="/users/<%=user._id%>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+    </form>
+    <a href="/users"><button>Back To All Users</button></a>
+
+</body>
+
+</html>

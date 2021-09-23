@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tweet</title>
+</head>
+
+<body>
+    <h1>
+        <%= user.name %>
+    </h1>
+    <h2>Make a new Tweet</h2>
+    <form action="/users/<%= user._id%>/tweets/<%=tweet._id%>?_method=PUT" method="post">
+        <div>
+            <label for="tweet">Tweet</label>
+            <textarea name="tweet" id="tweet" cols="30" rows="10"><%=tweet.tweet%></textarea>
+        </div>
+        <div>
+            <label for="likes">Likes:</label>
+            <input type="number" id="likes" name="likes" value="<%=tweet.likes%>">
+        </div>
+        <div>
+            <label for="dislikes">Disikes:</label>
+            <input type="number" id="dislikes" name="dislikes" value="<%=tweet.likes%>">
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
