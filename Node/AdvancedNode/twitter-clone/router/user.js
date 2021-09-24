@@ -3,6 +3,9 @@ const router = express.Router()
 const User = require('../models/user')
 const Tweet = require('../models/tweet')
 
+const session = require('express-session')
+const flash = require('connect-flash')
+
 const mongoose = require('mongoose')
 const ejs = require('ejs')
 const path = require('path')
@@ -14,7 +17,7 @@ const methodOverride = require('method-override')
 //User index
 router.get('/', async (req, res) => {
     const users = await User.find({}).populate('tweets')
-    res.render('users/index.ejs', { users })
+    res.render('users/index.ejs', { users, messages: req.flash('success') })
 })
 //New User Form
 router.get('/new', (req, res) => {
@@ -24,6 +27,7 @@ router.get('/new', (req, res) => {
 router.post('/', async (req, res) => {
     const user = await new User(req.body)
     await user.save()
+    req.flash('success', 'Successfully made a user!')
     res.redirect('/users')
 })
 //show each user

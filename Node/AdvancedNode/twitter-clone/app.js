@@ -127,6 +127,9 @@ const methodOverride = require('method-override')
 const userRouter = require('./router/user')
 const tweetRouter = require('./router/tweet')
 
+const session = require('express-session')
+const flash = require('connect-flash')
+
 const mongoose = require('mongoose')
 main().then(data => console.log('Database Connected!')).catch(err => console.log(err));
 
@@ -137,6 +140,12 @@ async function main() {
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
+app.use(session({
+    secret: 'jptsecret',
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(flash())
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }))
 

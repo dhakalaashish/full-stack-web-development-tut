@@ -10,23 +10,24 @@
 
 <body>
     <h1>List of all Users</h1>
-    <ul>
-        <% users.forEach((user)=>{ %>
-            <li>
-                <a href="/users/<%=user._id%>">
-                    <%= user.name %>
-                </a>, <%= user.age %>
-            </li>
-            <% }) %>
-    </ul>
+    <%=messages%>
+        <ul>
+            <% users.forEach((user)=>{ %>
+                <li>
+                    <a href="/users/<%=user._id%>">
+                        <%= user.name %>
+                    </a>, <%= user.age %>
+                </li>
+                <% }) %>
+        </ul>
 
-    <a href="/users/new">
-        <button>Create New User</button>
-    </a>
-    <br>
-    <a href="/tweets">
-        <button>List All Tweets</button>
-    </a>
+        <a href="/users/new">
+            <button>Create New User</button>
+        </a>
+        <br>
+        <a href="/tweets">
+            <button>List All Tweets</button>
+        </a>
 
 
 </body>
