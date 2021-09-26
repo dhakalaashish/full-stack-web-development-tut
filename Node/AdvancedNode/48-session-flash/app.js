@@ -52,8 +52,6 @@ app.get('/greet', (req, res) => {
     const { username } = req.session;
     res.send(`Welcome back, ${username}`)
 })
-
-
 app.get('/flash', (req, res) => {
     req.flash('success', 'Successfully done something!')
     res.redirect('/redirectroute')
