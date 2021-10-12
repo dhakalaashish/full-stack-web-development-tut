@@ -24,10 +24,19 @@ const seedDB = async () => {
         const camp = await new Campground({
             title: `${sample(descriptors)} ${sample(places)}`,
             location: `${cities[random1000].city},${cities[random1000].state}`,
-            image: 'https://source.unsplash.com/collection/483251',
+            images: [
+                {
+                    url:'https://res.cloudinary.com/aashishdhakal/image/upload/v1633658606/YelpCamp/jlxkqto4rnum6ar3alz5.jpg',
+                    filename:'YelpCamp/jlxkqto4rnum6ar3alz5'
+                },
+            ],
             description: 'The definition of a description is a statement that gives details about someone or something.An example of description is a story about the places visited on a family tria description of the journey; gave a vivid description of the game.',
             price: price,
-            author: '615ea42afcca94cb4145fad9'
+            geometry:{
+                type:'Point',
+                coordinates: [-113.1331,47.0202]
+            },
+            author: '615ff3f5b5af76051173315c'
         })
         await camp.save()
     }
